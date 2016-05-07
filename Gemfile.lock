@@ -138,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 2.1.1)
+  binding_of_caller
   byebug
   coffee-rails (~> 4.1.0)
   jquery-rails (~> 4.1.1)
