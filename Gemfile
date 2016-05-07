@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.1.1'
 
-# Use Foreman for process manager
+# Use Foreman for process management
 gem 'foreman', '~> 0.81.0'
 
 group :production do
