@@ -1,6 +1,13 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Use basic authentication if needed.
+  unless (ENV['AUTH_USER'].blank? || ENV['AUTH_PASSWORD'].blank?)
+    config.middleware.insert_after(::Rack::Runtime, "::Rack::Auth::Basic", "Credentials needed") do |u, p|
+      [u, p] == [ENV['AUTH_USER'], ENV['AUTH_PASSWORD']]
+    end
+  end
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
