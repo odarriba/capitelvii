@@ -1,0 +1,7 @@
+es:
+  layouts:
+    admin:
+      navbar:
+        brand_name: "Capitel VII Admin"
+        user:
+          sign_out: "Cerrar sesión"

@@ -26,13 +26,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Capitel VII</a>
+          <%= link_to t('.navbar.brand_name'), admin_path(), class: 'navbar-brand' %>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Users</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <%= link_to "#{current_user.email}&nbsp;<span class='caret'></span>".html_safe, '#', class: "dropdown-toggle", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': true, 'aria-expanded': false %>
+              <ul class="dropdown-menu">
+                <li><a href="#">Edit user</a></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to "<i class='fa fa-sign-out'></i>&nbsp;#{t('.navbar.user.sign_out')}".html_safe, destroy_user_session_path(), method: :delete %></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
