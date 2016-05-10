@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= yield :header_tags %>
 
-    <%= stylesheet_link_tag   'application', media: 'all' %>
+    <%= stylesheet_link_tag   'admin', media: 'all' %>
     <%= csrf_meta_tags %>
 
     <!--[if lt IE 9]>
@@ -38,7 +38,7 @@
               <ul class="dropdown-menu">
                 <li><a href="#">Edit user</a></li>
                 <li role="separator" class="divider"></li>
-                <li><%= link_to "<i class='fa fa-sign-out'></i>&nbsp;#{t('.navbar.user.sign_out')}".html_safe, destroy_user_session_path(), method: :delete %></li>
+                <li><%= link_to "<i class='fa fa-sign-out'></i>&nbsp;&nbsp;#{t('.navbar.user.sign_out')}".html_safe, destroy_user_session_path(), method: :delete %></li>
               </ul>
             </li>
           </ul>
