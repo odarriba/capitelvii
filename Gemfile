@@ -25,6 +25,9 @@ gem 'jquery-rails', '~> 4.1.1'
 # Use Foreman for process management
 gem 'foreman', '~> 0.81.0'
 
+# Rollbar for error reports
+gem 'rollbar', '~> 2.11.3'
+
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
   gem 'puma', '~> 3.4.0'
