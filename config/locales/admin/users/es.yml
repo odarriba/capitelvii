@@ -1,0 +1,12 @@
+es:
+  admin:
+    users:
+      message:
+        created: "El usuario <b>%{email}</b> ha sido creado correctamente."
+        updated: "El usuario <b>%{email}</b> ha sido actualizado correctamente."
+        destroyed: "El usuario <b>%{email}</b> ha sido eliminado correctamente."
+      error:
+        not_created: "El usuario no se ha podido crear. Por favor, revise el formulario a continuación."
+        not_updated: "El usuario no se ha podido actualizar. Por favor, revise el formulario a continuación."
+        not_destroyed: "El usuario <b>%{email}</b> no se ha podido eliminar."
+        not_found: "El usuario solicitado no se ha encontrado"
