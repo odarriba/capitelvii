@@ -1,6 +1,19 @@
 es:
   admin:
     users:
+      index:
+        title: "Usuarios"
+        subtitle: "listado de usuarios"
+        new: "Nuevo usuario"
+        stats:
+          one: "Un usuario registrado"
+          other: "%{count} usuarios registrados"
+        table:
+          email: E-mail
+          buttons:
+            edit: "Editar"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar este usuario?"
       message:
         created: "El usuario <b>%{email}</b> ha sido creado correctamente."
         updated: "El usuario <b>%{email}</b> ha sido actualizado correctamente."

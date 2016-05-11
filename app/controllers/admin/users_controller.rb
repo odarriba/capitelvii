@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :load_user, only: [:edit, :update, :destroy]
 
   def index
-    @user = User.all
+    @users = User.all
 
     respond_to do |format|
       format.html
@@ -27,7 +27,7 @@ class Admin::UsersController < Admin::BaseController
           redirect_to action: :index
         else
           flash[:error] = t(".error.not_created")
-          render action. :new
+          render action: :new
         end
       }
     end
