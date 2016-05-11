@@ -5,3 +5,5 @@ es:
         brand_name: "Capitel VII Admin"
         user:
           sign_out: "Cerrar sesión"
+      footer:
+        text_html: "%{year} &copy; Capitel VII S.L."

@@ -49,6 +49,12 @@
       <%= yield %>
     </div>
 
+    <footer>
+      <div class="container">
+        <p><%= t(".footer.text_html", year: Time.now.year) %></p>
+      </div>
+    </footer>
+
     <%= javascript_include_tag 'application' %>
     <%= yield :javascripts %>
   </body>
