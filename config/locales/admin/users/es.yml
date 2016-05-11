@@ -15,9 +15,15 @@ es:
             edit: "Editar"
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar este usuario?"
+      new:
+        title: "Crear un usuario"
+        subtitle: "detalles"
       create:
         success: "El usuario <b>%{email}</b> ha sido creado correctamente."
         error: "El usuario no se ha podido crear. Por favor, revise el formulario a continuación."
+      edit:
+        title: "Editar un usuario"
+        subtitle: "%{email}"
       update:
         success: "El usuario <b>%{email}</b> ha sido actualizado correctamente."
         error: "El usuario no se ha podido actualizar. Por favor, revise el formulario a continuación."
