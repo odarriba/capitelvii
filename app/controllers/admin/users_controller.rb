@@ -18,7 +18,19 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def create
+    @user = User.new(user_params)
 
+    respond_to do |format|
+      format.html {
+        if (@user.save)
+          flash[:notice] = t(".message.created")
+          redirect_to action: :index
+        else
+          flash[:error] = t(".message.not_created")
+          render action. :new
+        end
+      }
+    end
   end
 
   def edit
@@ -31,13 +43,25 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     return if @user.blank?
+
+    respond_to do |format|
+      format.html {
+        if (@user.update_attributes(user_params))
+          flash[:notice] = t(".message.updated")
+          redirect_to action: :index
+        else
+          flash[:error] = t(".error.not_updated")
+          render action: :edit
+        end
+      }
+    end
   end
 
   def destroy
     return if @user.blank?
 
     if (@user.destroy)
-      flash[:notice] = t(".messages.destroyed")
+      flash[:notice] = t(".message.destroyed")
     else
       flash[:error] = t(".error.not_destroyed")
     end
@@ -49,6 +73,8 @@ class Admin::UsersController < Admin::BaseController
 
   protected
 
+  # Function to load existing user based on ID received in params.
+  #
   def load_user
     @user = User.where(id: params[:id]).first
 
@@ -56,5 +82,10 @@ class Admin::UsersController < Admin::BaseController
       flash[:error] = t(".errors.not_found")
       redirect_to action: :index
     end
+  end
+
+  # Strong Parameters
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end
