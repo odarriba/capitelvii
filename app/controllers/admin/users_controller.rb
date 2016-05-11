@@ -1,5 +1,5 @@
 class Admin::UsersController < Admin::BaseController
-  before_action :load_user
+  before_action :load_user, only: [:edit, :update, :destroy]
 
   def index
     @user = User.all
