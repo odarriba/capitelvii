@@ -32,10 +32,10 @@ class Admin::UsersController < Admin::BaseController
     respond_to do |format|
       format.html {
         if (@user.save)
-          flash[:notice] = t(".message.created", email: @user.email)
+          flash[:notice] = t(".success", email: @user.email)
           redirect_to action: :index
         else
-          flash[:error] = t(".error.not_created")
+          flash[:error] = t(".error")
           render action: :new
         end
       }
@@ -56,10 +56,10 @@ class Admin::UsersController < Admin::BaseController
     respond_to do |format|
       format.html {
         if (@user.update_attributes(user_params))
-          flash[:notice] = t(".message.updated", email: @user.email)
+          flash[:notice] = t(".success", email: @user.email)
           redirect_to action: :index
         else
-          flash[:error] = t(".error.not_updated")
+          flash[:error] = t(".error")
           render action: :edit
         end
       }
@@ -70,9 +70,9 @@ class Admin::UsersController < Admin::BaseController
     return if @user.blank?
 
     if (@user.destroy)
-      flash[:notice] = t(".message.destroyed", email: @user.email)
+      flash[:notice] = t(".success", email: @user.email)
     else
-      flash[:error] = t(".error.not_destroyed", email: @user.email)
+      flash[:error] = t(".error", email: @user.email)
     end
 
     respond_to do |format|
@@ -88,7 +88,7 @@ class Admin::UsersController < Admin::BaseController
     @user = User.where(id: params[:id]).first
 
     if (@user.blank?)
-      flash[:error] = t(".errors.not_found")
+      flash[:error] = t("admin.users.not_found")
       redirect_to action: :index
     end
   end

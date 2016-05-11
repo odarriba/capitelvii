@@ -13,6 +13,14 @@ body {
 
 nav.navbar-fixed-top + div.container {
   margin-top: 51px;
+
+  > .alert {
+    margin-top: 20px;
+  }
+}
+
+.page-header {
+  margin-top: 20px;
 }
 
 footer {

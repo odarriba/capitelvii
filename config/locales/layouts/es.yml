@@ -1,6 +1,7 @@
 es:
   layouts:
     admin:
+      title: "Capitel VII"
       navbar:
         brand_name: "Capitel VII Admin"
         elements:
