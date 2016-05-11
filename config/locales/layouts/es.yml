@@ -3,6 +3,10 @@ es:
     admin:
       navbar:
         brand_name: "Capitel VII Admin"
+        elements:
+          pages: "Páginas"
+          albums: "Galerías"
+          users: "Usuarios"
         user:
           sign_out: "Cerrar sesión"
       footer:

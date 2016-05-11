@@ -30,7 +30,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#about">Users</a></li>
+            <% Admin::BaseController.subclasses.map(&:controller_name).each do |c| %>
+            <li<% if (controller_name == c) %> class="active"<% end %>>
+              <%= link_to t(".navbar.elements.#{c}"), url_for(controller: c, action: :index) %>
+            </li>
+            <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
