@@ -4,8 +4,9 @@
 </div>
 <div class="list-actions clearfix">
   <%= link_to t(".new"), url_for(action: :new), class: "btn btn-success pull-left" %>
-  <span class='pull-right'>
-    <%= t(".stats", count: @users.count) %>
+  <span class='pull-right text-right'>
+    <%= t(".stats", count: @users.total_count) %><br />
+    <%= t(".stats_page", current_page: @users.current_page, total_pages: @users.total_pages) %>
   </span>
 </div>
 <hr class='divider' />
@@ -33,3 +34,6 @@
     </tr>
     <% end %>
 </table>
+<div class='text-center'>
+  <%= paginate @users, window: 2, theme: 'twitter-bootstrap-3' %>
+</div>

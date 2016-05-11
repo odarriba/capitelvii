@@ -2,7 +2,16 @@ class Admin::UsersController < Admin::BaseController
   before_action :load_user, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all
+    page = params[:page].to_i unless (params[:page].blank? || params[:page].to_i < 1)
+    page ||= 1
+
+    max_page = (User.count*1.0/User.default_per_page).ceil
+    max_page = 1 if (max_page == 0)
+
+    page = max_page if (page > max_page)
+
+    # Paginate results
+    @users = User.page(page)
 
     respond_to do |format|
       format.html

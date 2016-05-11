@@ -8,6 +8,7 @@ es:
         stats:
           one: "Un usuario registrado"
           other: "%{count} usuarios registrados"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
         table:
           email: E-mail
           buttons:
