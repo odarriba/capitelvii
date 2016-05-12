@@ -14,7 +14,7 @@ es:
         text: "Introduce la dirección de e-mail de la cuenta para enviar un mensaje de recuperación."
         email: "E-mail"
         submit: "Enviar instrucciones por e-mail"
-      new:
+      edit:
         title: "Cambiar contraseña"
         text: "Introduzca la neuva contraseña para su cuenta."
         password: "Nueva contraseña"

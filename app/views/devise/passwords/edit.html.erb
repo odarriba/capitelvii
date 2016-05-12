@@ -5,10 +5,10 @@
   <%= f.hidden_field :reset_password_token %>
 
   <%= f.label :password, t('.password'), class: 'sr-only' %>
-  <%= f.text_field :password, type: "password", class: "form-control", placeholder: t('.password'), autocomplete: "off", required: true, autofocus: true %>
+  <%= f.text_field :password, type: "password", class: "form-control password", placeholder: t('.password'), autocomplete: "off", required: true, autofocus: true %>
 
   <%= f.label :password_confirmation, t('.password_confirmation'), class: 'sr-only' %>
-  <%= f.text_field :password_confirmation, type: "password", class: "form-control", placeholder: t('.password_confirmation'), autocomplete: "off", required: true, autofocus: true %>
+  <%= f.text_field :password_confirmation, type: "password", class: "form-control password-confirmation", placeholder: t('.password_confirmation'), autocomplete: "off", required: true, autofocus: true %>
 
   <%= button_tag t(".submit"), class: "btn btn-lg btn-block btn-primary", type: "submit" %>
 <% end %>

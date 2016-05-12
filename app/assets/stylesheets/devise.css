@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require bootstrap_and_overrides
  *= require font_awesome_and_overrides
  *= require_self
@@ -63,4 +62,16 @@ body {
 
 .form-devise .form-password button[type="submit"] {
   margin: 20px 0;
+}
+
+.form-devise .form-password-change input.password {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-devise .form-password-change input.password-confirmation {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
