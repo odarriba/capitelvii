@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>">
   <head>
-    <title>Capitel VII</title>
+    <title><%= content_for?(:title) ? "#{yield(:title)} - " : "" %><%= t(".title") %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= yield :header_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag   'devise', media: 'all' %>
     <%= csrf_meta_tags %>
 
     <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
 
   </head>
   <body>
-    <%= render partial: 'shared/header' %>
-    <div class="container">
+    <div class="container form-devise">
+      <%= bootstrap_flash %>
       <%= yield %>
     </div>
 

@@ -16,8 +16,13 @@ gem 'sassc-rails', '~> 1.2.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Bootstrap SASS
+# Bootstrap & FontAwesome SASS
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-sass', '~> 4.6.2'
+
+# Pagination
+gem 'kaminari', '~> 0.16.3'
+gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.1.1'

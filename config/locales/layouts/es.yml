@@ -1,0 +1,16 @@
+es:
+  layouts:
+    devise:
+      title: "Capitel VII"
+    admin:
+      title: "Capitel VII"
+      navbar:
+        brand_name: "Capitel VII Admin"
+        elements:
+          pages: "Páginas"
+          albums: "Galerías"
+          users: "Usuarios"
+        user:
+          sign_out: "Cerrar sesión"
+      footer:
+        text_html: "%{year} &copy; Capitel VII S.L."

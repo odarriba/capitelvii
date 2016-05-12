@@ -1,0 +1,21 @@
+<% content_for :title, t(".title") %>
+<h2><%= t(".title") %></h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-login'}) do |f| %>
+  <%= f.label :email, t('.email'), class: 'sr-only' %>
+  <%= f.text_field :email, type: "email", class: "form-control", placeholder: t('.email'), required: true, autofocus: true %>
+  <%= f.label :password, t('.password'), class: 'sr-only' %>
+  <%= f.password_field :password, class: "form-control", placeholder: t('.password'), required: true %>
+
+  <div class='form-group'>
+    <div class="checkbox pull-left">
+      <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me %>&nbsp;<%= t('.remember_me') %>
+      <% end %>
+    </div>
+    <div class="forgot-link pull-right">
+      <%= link_to t('.forgot_password'), url_for(controller: 'devise/passwords', action: :new) %>
+    </div>
+  </div>
+  <%= button_tag t(".submit"), class: "btn btn-lg btn-block btn-primary", type: "submit" %>
+<% end %>

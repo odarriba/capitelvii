@@ -1,0 +1,22 @@
+es:
+  devise:
+    sessions:
+      new:
+        title: "Iniciar sesión"
+        email: "E-mail"
+        password: "Contraseña"
+        remember_me: "Recordarme"
+        forgot_password: "Recordar contraseña"
+        submit: "Iniciar sesión"
+    passwords:
+      new:
+        title: "Cambiar contraseña"
+        text: "Introduce la dirección de e-mail de la cuenta para enviar un mensaje de recuperación."
+        email: "E-mail"
+        submit: "Enviar instrucciones por e-mail"
+      edit:
+        title: "Cambiar contraseña"
+        text: "Introduzca la neuva contraseña para su cuenta."
+        password: "Nueva contraseña"
+        password_confirmation: "Repita la contraseña"
+        submit: "Guardar contraseña"

@@ -1,0 +1,43 @@
+es:
+  admin:
+    users:
+      form:
+        email: "E-mail"
+        email_placeholder: "Dirección de e-mail"
+        password: "Contraseña"
+        password_placeholder: "Contraseña de al menos 8 caracteres"
+        password_helper: "Debe introducirse para cambiar la contraseña o si está creando un usuario nuevo."
+        password_confirmation: "Repita la contraseña"
+        password_confirmation_placeholder: "Repita la contraseña"
+        submit: "Guardar cambios"
+        back: "Volver al listado"
+      index:
+        title: "Usuarios"
+        subtitle: "listado de usuarios"
+        new: "Nuevo usuario"
+        stats:
+          one: "Un usuario registrado"
+          other: "%{count} usuarios registrados"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
+        table:
+          email: E-mail
+          buttons:
+            edit: "Editar"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar este usuario?"
+      new:
+        title: "Crear un usuario"
+        subtitle: "detalles"
+      create:
+        success: "El usuario <b>%{email}</b> ha sido creado correctamente."
+        error: "El usuario no se ha podido crear. Por favor, revise el formulario a continuación."
+      edit:
+        title: "Editar un usuario"
+        subtitle: "%{email}"
+      update:
+        success: "El usuario <b>%{email}</b> ha sido actualizado correctamente."
+        error: "El usuario no se ha podido actualizar. Por favor, revise el formulario a continuación."
+      destroy:
+        success: "El usuario <b>%{email}</b> ha sido eliminado correctamente."
+        error: "El usuario <b>%{email}</b> no se ha podido eliminar."
+      not_found: "El usuario solicitado no se ha podido encontrar."
