@@ -1,5 +1,7 @@
 es:
   layouts:
+    devise:
+      title: "Capitel VII"
     admin:
       title: "Capitel VII"
       navbar:
