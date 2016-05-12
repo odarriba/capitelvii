@@ -53,9 +53,16 @@ class Admin::UsersController < Admin::BaseController
   def update
     return if @user.blank?
 
+    user_data = user_params
+
+    if (user_data[:password].blank? && user_data[:password_confirmation].blank?)
+      user_data.delete(:password)
+      user_data.delete(:password_confirmation)
+    end
+
     respond_to do |format|
       format.html {
-        if (@user.update_attributes(user_params))
+        if (@user.update_attributes(user_data))
           flash[:notice] = t(".success", email: @user.email)
           redirect_to action: :index
         else
