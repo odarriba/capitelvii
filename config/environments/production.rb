@@ -79,7 +79,9 @@ Rails.application.configure do
     user_name:            Rails.application.secrets.smtp['username'],
     password:             Rails.application.secrets.smtp['password'],
     authentication:       'plain',
-    enable_starttls_auto: true  }
+    enable_starttls_auto: true,
+    :openssl_verify_mode  => 'none'
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
