@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508170848) do
+ActiveRecord::Schema.define(version: 20160513140814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title",                       null: false
+    t.string   "slug",                        null: false
+    t.text     "body"
+    t.integer  "order",        default: 0
+    t.boolean  "show_in_menu", default: true
+    t.boolean  "draft",        default: true
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "pages", ["slug"], name: "index_pages_on_slug", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
