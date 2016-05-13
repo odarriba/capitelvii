@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
-  validate :title, :slug, presence: true
+  validates :title, :slug, presence: true
 
-  default_scope order('order ASC name DESC')
+  default_scope ->() { order('pages.order ASC, title DESC') }
 
   scope :published, ->() {
     where(draft: false)
