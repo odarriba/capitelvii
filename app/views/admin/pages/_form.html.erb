@@ -6,6 +6,6 @@
 </div>
 <div class="form-group<% unless f.object.errors[:body].blank? %> has-error<% end %>">
   <div class="col-sm-12">
-    <%= f.text_area :body, class: 'form-control' %>
+    <%= f.cktext_area :body, :class => 'form-control', :ckeditor => {:language => 'es'} %>
   </div>
 </div>
