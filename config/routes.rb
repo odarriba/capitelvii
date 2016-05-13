@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/" => "base#index"
 
+    resources :pages, except: [:show]
     resources :users, except: [:show]
   end
   # The priority is based upon order of creation: first created -> highest priority.
