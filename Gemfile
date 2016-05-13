@@ -24,6 +24,13 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
+# CKEditor
+gem 'ckeditor', '~> 4.1.6'
+
+# Images
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick', '~> 4.5.1'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.1.1'
 
