@@ -2,15 +2,9 @@ es:
   admin:
     pages:
       form:
-        email: "E-mail"
-        email_placeholder: "Dirección de e-mail"
-        password: "Contraseña"
-        password_placeholder: "Contraseña de al menos 8 caracteres"
-        password_helper: "Debe introducirse para cambiar la contraseña o si está creando un usuario nuevo."
-        password_confirmation: "Repita la contraseña"
-        password_confirmation_placeholder: "Repita la contraseña"
-        submit: "Guardar cambios"
-        back: "Volver al listado"
+        title: "Título"
+        title_placeholder: "Título de la página"
+        body: "Cuerpo"
       index:
         title: "Páginas"
         subtitle: "listado de páginas"
