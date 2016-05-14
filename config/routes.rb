@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, path: "admin"
+
+  authenticate :user do
+    mount Ckeditor::Engine => '/ckeditor'
+  end
 
   namespace :admin do
     get "/" => "base#index"
