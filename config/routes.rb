@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   # Add routes for pages
-  get '*slug', to: 'pages#show'
+  get '*slug', to: 'pages#show', as: :page
   root 'pages#show', defaults: { slug: "/" }
 
   # The priority is based upon order of creation: first created -> highest priority.

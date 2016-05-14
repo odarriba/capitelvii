@@ -13,8 +13,8 @@
 <table class='table table-hover'>
   <thead>
     <tr>
-      <th class="col-sm-9"><%= t('.table.title') %></th>
-      <th class="col-sm-3"></th>
+      <th class="col-sm-8"><%= t('.table.title') %></th>
+      <th class="col-sm-4"></th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +23,7 @@
       <td><%= page.title %></td>
       <td>
         <span class='pull-right'>
+          <%= link_to "<i class='fa fa-eye'></i>&nbsp;#{t(".table.buttons.show")}".html_safe, page.path, target: '_blank', class: "btn btn-xs btn-default" %>
           <%= link_to "<i class='fa fa-pencil'></i>&nbsp;#{t(".table.buttons.edit")}".html_safe, url_for(action: :edit, id: page.id), class: "btn btn-xs btn-default" %>
           <%= link_to "<i class='fa fa-trash'></i>&nbsp;#{t(".table.buttons.destroy")}".html_safe, url_for(action: :destroy, id: page.id), method: :delete, 'data-confirm': t('.table.buttons.destroy_confirm'), class: "btn btn-xs btn-danger" %>
         </span>
