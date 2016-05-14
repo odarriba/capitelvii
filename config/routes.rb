@@ -11,6 +11,11 @@ Rails.application.routes.draw do
     resources :pages, except: [:show]
     resources :users, except: [:show]
   end
+
+  # Add routes for pages
+  get '*slug', to: 'pages#show'
+  root 'pages#show', defaults: { slug: "/" }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
