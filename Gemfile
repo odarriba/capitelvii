@@ -20,6 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass', '~> 4.6.2'
 
+# FriendlyId for slugging
+gem 'friendly_id', '~> 5.1.0'
+
 # Pagination
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
