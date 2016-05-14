@@ -23,10 +23,15 @@
       <td><%= page.title %></td>
       <td>
         <span class='pull-right'>
-          <%= link_to "<i class='fa fa-pencil'></i>&nbsp;#{t(".table.buttons.edit")}".html_safe, url_for(action: :edit, id: user.id), class: "btn btn-xs btn-default" %>
-          <%= link_to "<i class='fa fa-trash'></i>&nbsp;#{t(".table.buttons.destroy")}".html_safe, url_for(action: :destroy, id: user.id), method: :delete, 'data-confirm': t('.table.buttons.destroy_confirm'), class: "btn btn-xs btn-danger" %>
+          <%= link_to "<i class='fa fa-pencil'></i>&nbsp;#{t(".table.buttons.edit")}".html_safe, url_for(action: :edit, id: page.id), class: "btn btn-xs btn-default" %>
+          <%= link_to "<i class='fa fa-trash'></i>&nbsp;#{t(".table.buttons.destroy")}".html_safe, url_for(action: :destroy, id: page.id), method: :delete, 'data-confirm': t('.table.buttons.destroy_confirm'), class: "btn btn-xs btn-danger" %>
         </span>
       </td>
+    </tr>
+    <% end %>
+    <% if @pages.blank? %>
+    <tr class="no-records">
+      <td colspan="2"><%= t(".table.no-records") %></td>
     </tr>
     <% end %>
 </table>

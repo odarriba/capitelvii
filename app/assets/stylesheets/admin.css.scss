@@ -14,3 +14,14 @@
  *= require font_awesome_and_overrides
  *= require_self
  */
+
+table tr.no-records {
+  td {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.5em;
+    text-transform: lowercase;
+    color: #ccc;
+    padding: 20px 0;
+  }
+}
