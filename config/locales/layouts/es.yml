@@ -1,5 +1,7 @@
 es:
   layouts:
+    application:
+      title: "Capitel VII"
     devise:
       title: "Capitel VII"
     admin:
