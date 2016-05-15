@@ -1,0 +1,52 @@
+es:
+  admin:
+    pages:
+      form:
+        title: "Título"
+        title_placeholder: "Título de la página"
+        body: "Cuerpo"
+        slug: "Slug"
+        slug_placeholder: "Slug de la página"
+        slug_help: "Dejar en blanco para generar a partir del título"
+        order: "Posición"
+        order_placeholder: "Posición de la página en el menú"
+        draft: "Estado"
+        draft_true: "Borrador"
+        draft_false: "Publicada"
+        show_in_menu: "Visibilidad"
+        show_in_menu_true: "Mostrar en el menú"
+        show_in_menu_false: "Ocultar del menú"
+        back: "Volver al listado"
+        submit: "Guardar cambios"
+      index:
+        title: "Páginas"
+        subtitle: "listado de páginas"
+        new: "Nueva página"
+        stats:
+          one: "Una página registrada"
+          other: "%{count} páginas registradas"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
+        table:
+          title: Título
+          buttons:
+            show: "Ver"
+            edit: "Editar"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar esta página?"
+          no-records: "Parece que aquí aún no hay nada"
+      new:
+        title: "Crear una página"
+        subtitle: "detalles"
+      create:
+        success: "La página <b>%{title}</b> ha sido creada correctamente."
+        error: "La página no se ha podido crear. Por favor, revise el formulario a continuación."
+      edit:
+        title: "Editar una página"
+        subtitle: "%{title}"
+      update:
+        success: "ELa página <b>%{title}</b> ha sido actualizada correctamente."
+        error: "La página no se ha podido actualizar. Por favor, revise el formulario a continuación."
+      destroy:
+        success: "La página <b>%{title}</b> ha sido eliminada correctamente."
+        error: "La página <b>%{title}</b> no se ha podido eliminar."
+      not_found: "La página solicitada no se ha podido encontrar."

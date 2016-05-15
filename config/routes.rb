@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
   devise_for :users, path: "admin"
 
+  authenticate :user do
+    mount Ckeditor::Engine => '/ckeditor'
+  end
+
   namespace :admin do
     get "/" => "base#index"
 
+    resources :pages, except: [:show]
     resources :users, except: [:show]
   end
+
+  # Add routes for pages
+  get '*slug', to: 'pages#show', as: :page
+  root 'pages#show', defaults: { slug: "/" }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
