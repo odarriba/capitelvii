@@ -12,6 +12,10 @@ class Page < ActiveRecord::Base
     where(draft: false)
   }
 
+  scope :menu_items, ->() {
+    where(show_in_menu: true)
+  }
+
   # Generate friendly_id when the slug is blank
   def should_generate_new_friendly_id?
     slug.blank?

@@ -1,4 +1,5 @@
 es:
+  sitename: "Capitel VII"
   views:
     pagination:
       first: "&laquo; Primero"

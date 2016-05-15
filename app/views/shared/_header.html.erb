@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-capitel">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo.png", class: "logo", alt: t("sitename") %>
+      </a>
+      <div class="phones">
+        <i class='fa fa-mobile'></i>&nbsp;&nbsp;&nbsp;609 86 63 94<br />
+        <i class='fa fa-phone'></i>&nbsp;&nbsp;985 79 64 63
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav elements-3">
+        <% Page.published.menu_items.each do |page| %>
+        <li<% if request.path == page.path %> class="active"<% end %>>
+          <%= link_to page.title, page.path %>
+        </li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

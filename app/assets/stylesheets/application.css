@@ -11,5 +11,13 @@
  * file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require font_awesome_and_overrides
+ *= require_tree ./ui/
  *= require_self
  */
+
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+ .container {
+   max-width: 900px;
+ }
