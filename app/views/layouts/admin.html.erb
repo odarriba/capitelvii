@@ -60,7 +60,15 @@
       </div>
     </footer>
 
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'admin' %>
+
+    <script type="text/javascript">
+    $(function() {
+      CKEDITOR.config.customConfig = '<%= asset_path('config.js') %>';
+    });
+    </script>
+
+    <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= yield :javascripts %>
   </body>
 </html>
