@@ -25,3 +25,22 @@ table tr.no-records {
     padding: 30px 0;
   }
 }
+
+/* Sticky footer */
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 70px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #f5f5f5;
+
+  p {
+    margin: 25px 0;
+  }
+}

@@ -2,6 +2,9 @@ es:
   layouts:
     application:
       title: "Capitel VII"
+      footer:
+        text_html: "Capitel VII &copy; %{year}"
+        made_html: "Made by Óscar de Arriba"
     devise:
       title: "Capitel VII"
     admin:

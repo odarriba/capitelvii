@@ -21,7 +21,7 @@ nav.navbar.navbar-capitel {
       }
 
       &.text {
-        color: $brand-color;
+        color: white;
         display: none;
       }
     }
@@ -34,10 +34,10 @@ nav.navbar.navbar-capitel {
       float: right;
       text-align: right;
 
-      padding-top: 40px;
+      padding-top: 35px;
 
-      font-size: 2.1em;
-      line-height: 1.2em;
+      font-size: 1.8em;
+      line-height: 1.4em;
       color: #000;
 
       font-family: 'Roboto', sans-serif;
@@ -46,6 +46,7 @@ nav.navbar.navbar-capitel {
 
   .navbar-collapse {
     border: 1px solid $brand-color;
+    background-color: white;
     border-left: 0;
     border-right: 0;
     padding: 0;
@@ -88,10 +89,10 @@ nav.navbar.navbar-capitel {
     }
 
     .navbar-toggle {
-      border-color: $brand-color;
+      border-color: white;
 
       > .icon-bar {
-        background-color: $brand-color;
+        background-color: white;
       }
 
       &:hover, &:active, &:focus {
@@ -100,6 +101,8 @@ nav.navbar.navbar-capitel {
     }
 
     .navbar-header {
+      background-color: $brand-color;
+      border-bottom-color: darken($brand-color, 5%);
       .navbar-brand.image {
         display: none;
       }
