@@ -13,9 +13,17 @@ nav.navbar.navbar-capitel {
     border-bottom: 2px solid $brand-color;
 
     .navbar-brand {
-      height: auto;
       margin: 0;
-      padding: 20px 15px 10px 15px;
+
+      &.image {
+        height: auto;
+        padding: 20px 15px 10px 15px;
+      }
+
+      &.text {
+        color: $brand-color;
+        display: none;
+      }
     }
 
     img.logo {
@@ -67,6 +75,40 @@ nav.navbar.navbar-capitel {
         &:hover {
           background-color: lighten($brand-color, 30%);
         }
+      }
+    }
+  }
+}
+
+@media(max-width:767px){
+  nav.navbar.navbar-capitel {
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .navbar-toggle {
+      border-color: $brand-color;
+
+      > .icon-bar {
+        background-color: $brand-color;
+      }
+
+      &:hover, &:active, &:focus {
+        background-color: lighten($brand-color, 30%);
+      }
+    }
+
+    .navbar-header {
+      .navbar-brand.image {
+        display: none;
+      }
+      .navbar-brand.text {
+        display: block;
+      }
+
+      .phones {
+        display: none;
       }
     }
   }
