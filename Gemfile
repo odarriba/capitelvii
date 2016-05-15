@@ -34,6 +34,9 @@ gem 'ckeditor', '~> 4.1.6'
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5.1'
 
+# Fog to upload stuff to S3
+gem 'fog-aws', '~> 0.9.2'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.1.1'
 
