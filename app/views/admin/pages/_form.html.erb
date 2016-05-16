@@ -44,6 +44,39 @@
   </div>
 </div>
 <div class="form-group">
+  <div class="col-sm-12">
+    <hr class="divider" />
+  </div>
+</div>
+<!-- SEO fields -->
+<fieldset class='row'>
+  <h3 class='title'><%= t(".seo_fields") %></h3>
+  <div class='col-md-6 col-sm-12'>
+    <div class="form-group<% unless f.object.errors[:seo_title].blank?%> has-error<% end %>">
+      <%= f.label :seo_title, t('.seo_title'), class: 'col-md-4 col-sm-2 control-label' %>
+      <div class="col-md-8 col-sm-10">
+        <%= f.text_field :seo_title, type: 'text', class: 'form-control', placeholder: t('.seo_title_placeholder') %>
+      </div>
+    </div>
+    <div class="form-group<% unless f.object.errors[:seo_tags].blank?%> has-error<% end %>">
+      <%= f.label :seo_tags, t('.seo_tags'), class: 'col-md-4 col-sm-2 control-label' %>
+      <div class="col-md-8 col-sm-10">
+        <%= f.text_field :seo_tags, type: 'text', class: 'form-control', placeholder: t('.seo_tags_placeholder') %>
+        <p class="help-block"><%= t(".seo_tags_help") %></p>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-6 col-sm-12'>
+    <div class="form-group<% unless f.object.errors[:seo_description].blank?%> has-error<% end %>">
+      <%= f.label :seo_description, t('.seo_description'), class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= f.text_area :seo_description, class: 'form-control', placeholder: t('.seo_description_placeholder'), rows: 4 %>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+<div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
     <hr class="divider" />
   </div>

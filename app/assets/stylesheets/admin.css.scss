@@ -26,6 +26,12 @@ table tr.no-records {
   }
 }
 
+fieldset {
+  .title {
+    margin: -15px 15px 20px 15px;
+  }
+}
+
 /* Sticky footer */
 body {
   /* Margin bottom by footer height */
