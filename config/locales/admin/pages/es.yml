@@ -43,7 +43,7 @@ es:
             edit: "Editar"
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar esta página?"
-          no-records: "Parece que aquí aún no hay nada"
+          no-records: "Parece que aquí aún no hay nada..."
       new:
         title: "Crear una página"
         subtitle: "detalles"

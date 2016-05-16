@@ -15,6 +15,7 @@ es:
             show: "Ver"
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar esta petición?"
+          no-records: "Parece que aquí aún no hay nada..."
       show:
         title: "Ver petición"
         name: "Nombre"
