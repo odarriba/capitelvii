@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
   end
 
-  get '/contacta', to: 'contacts#new'
+  get '/contacta', to: 'contacts#new', as: :new_contact
   post '/contacta', to: 'contacts#create'
 
   # Add routes for pages
