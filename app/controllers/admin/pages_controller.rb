@@ -95,6 +95,6 @@ class Admin::PagesController < Admin::BaseController
 
   # Strong Parameters
   def page_params
-    params.require(:page).permit(:title, :slug, :body, :order, :show_in_menu, :draft)
+    params.require(:page).permit(:title, :subtitle, :slug, :body, :order, :show_in_menu, :draft)
   end
 end

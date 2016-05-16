@@ -1,6 +1,11 @@
 <div class="form-group<% unless f.object.errors[:title].blank?%> has-error<% end %>">
   <div class="col-sm-12">
-    <%= f.text_field :title, type: 'title', class: 'form-control input-lg', placeholder: t('.title_placeholder'), required: true %>
+    <%= f.text_field :title, type: 'text', class: 'form-control input-lg', placeholder: t('.title_placeholder'), required: true %>
+  </div>
+</div>
+<div class="form-group<% unless f.object.errors[:subtitle].blank?%> has-error<% end %>">
+  <div class="col-sm-12">
+    <%= f.text_field :subtitle, type: 'text', class: 'form-control', placeholder: t('.subtitle_placeholder') %>
   </div>
 </div>
 <div class="form-group<% unless f.object.errors[:body].blank? %> has-error<% end %>">

@@ -2,9 +2,15 @@
 
 .page-header {
   margin-top: 0;
-  
+
   .title {
     color: $brand-color;
     margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    font-weight: lighter;
+    font-size: 0.98em;
   }
 }

@@ -4,6 +4,8 @@ es:
       form:
         title: "Título"
         title_placeholder: "Título de la página"
+        subtitle: "Subtítulo"
+        subtitle_placeholder: "Subtítulo de la página (opcional)"
         body: "Cuerpo"
         slug: "Slug"
         slug_placeholder: "Slug de la página"
