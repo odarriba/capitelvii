@@ -1,6 +1,29 @@
 es:
   admin:
     galleries:
+      form:
+        title: "Título"
+        title_placeholder: "Título de la galería"
+        description: "Descripción"
+        description_placeholder: "Descripción de la galería (opcional)"
+        slug: "Slug"
+        slug_placeholder: "Slug de la galería"
+        slug_help: "Dejar en blanco para generar a partir del título"
+        position: "Posición"
+        position_placeholder: "Posición de la página en el menú"
+        draft: "Estado"
+        draft_true: "Borrador"
+        draft_false: "Publicada"
+        seo_fields: "Search Engine Optimization"
+        seo_title: "Título"
+        seo_title_placeholder: "Título de la galería para SEO"
+        seo_tags: "Etiquetas"
+        seo_tags_placeholder: "Etiquetas para SEO"
+        seo_tags_help: "Escribir etiquetas cortas, separadas por comas"
+        seo_description: "Descripción"
+        seo_description_placeholder: "Pequeño texto descriptivo que aparecer en los buscadores."
+        back: "Volver al listado"
+        submit: "Guardar cambios"
       index:
         title: "Galerías"
         subtitle: "listado de galerías"
@@ -18,3 +41,9 @@ es:
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar esta galería?"
           no-records: "Parece que aquí aún no hay nada..."
+      new:
+        title: "Crear una galería"
+        subtitle: "detalles"
+      create:
+        success: "La galería <b>%{title}</b> ha sido creada correctamente."
+        error: "La galería no se ha podido crear. Por favor, revise el formulario a continuación."

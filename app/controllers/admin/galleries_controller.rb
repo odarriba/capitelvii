@@ -17,6 +17,11 @@ class Admin::GalleriesController < Admin::BaseController
   end
 
   def new
+    @gallery = Gallery.new
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def create
