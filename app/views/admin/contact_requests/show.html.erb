@@ -1,6 +1,6 @@
 <% content_for :title, t(".title") %>
 <div class="page-header">
-  <h1><%= t(".title") %> <small><%= t(".subtitle") %></small></h1>
+  <h1><%= t(".title") %> <small><%= @contact_request.name %></small></h1>
 </div>
 <div class="form-horizontal">
   <div class="form-group">
@@ -45,7 +45,8 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <%= link_to t(".back"), url_for(action: :index), class: "btn btn-default pull-left" %>
+      <%= link_to "<i class='fa fa-chevron-left'></i>&nbsp;&nbsp;#{t(".back")}".html_safe, url_for(action: :index), class: "btn btn-default pull-left" %>
+      <%= link_to "<i class='fa fa-trash'></i>&nbsp;#{t(".destroy")}".html_safe, url_for(action: :destroy, id: @contact_request.id), method: :delete, 'data-confirm': t('.destroy_confirm'), class: "btn btn-danger pull-right" %>
     </div>
   </div>
 
