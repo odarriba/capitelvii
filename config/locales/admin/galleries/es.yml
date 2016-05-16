@@ -47,3 +47,13 @@ es:
       create:
         success: "La galería <b>%{title}</b> ha sido creada correctamente."
         error: "La galería no se ha podido crear. Por favor, revise el formulario a continuación."
+      edit:
+        title: "Editar una galería"
+        subtitle: "%{title}"
+      update:
+        success: "La galería <b>%{title}</b> ha sido actualizada correctamente."
+        error: "La galería no se ha podido actualizar. Por favor, revise el formulario a continuación."
+      destroy:
+        success: "La galería <b>%{title}</b> ha sido eliminada correctamente."
+        error: "La galería <b>%{title}</b> no se ha podido eliminar."
+      not_found: "La galería solicitada no se ha podido encontrar."
