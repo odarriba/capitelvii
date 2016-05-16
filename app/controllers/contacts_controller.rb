@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
   # if not found, get a new empty object.
   #
   def load_page
-    @page = Page.find('contacta') || Page.new
+    @page = Page.find_or_initialize_by(slug: 'contacta') || Page.new
   end
 
   # Strong Paramters filter to get contact request params
