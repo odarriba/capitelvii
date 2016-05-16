@@ -1,0 +1,10 @@
+@import "../variables";
+
+.page-header {
+  margin-top: 0;
+  
+  .title {
+    color: $brand-color;
+    margin-top: 0;
+  }
+}
