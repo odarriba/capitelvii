@@ -9,4 +9,14 @@ class ContactRequest < ActiveRecord::Base
   validates :phone, numericality: { only_integer: true, greater_than: 0 }
 
   default_scope ->() { order('updated_at DESC') }
+
+  after_create :send_email
+
+  protected
+
+  # Send the information to the notify address after saving the object
+  #
+  def send_email
+    ContactRequestMailer.notify_email(self).deliver_now
+  end
 end
