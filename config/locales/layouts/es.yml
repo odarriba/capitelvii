@@ -15,7 +15,7 @@ es:
           pages: "Páginas"
           albums: "Galerías"
           users: "Usuarios"
-        view_site: "Ir la página"
+        view_site: "Ver la web"
         user:
           sign_out: "Cerrar sesión"
       footer:
