@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516085712) do
+ActiveRecord::Schema.define(version: 20160516090952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,15 +46,18 @@ ActiveRecord::Schema.define(version: 20160516085712) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "pages", force: :cascade do |t|
-    t.string   "title",                       null: false
-    t.string   "slug",                        null: false
+    t.string   "title",                          null: false
+    t.string   "slug",                           null: false
     t.text     "body"
-    t.integer  "order",        default: 0
-    t.boolean  "show_in_menu", default: true
-    t.boolean  "draft",        default: true
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "order",           default: 0
+    t.boolean  "show_in_menu",    default: true
+    t.boolean  "draft",           default: true
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "subtitle"
+    t.string   "seo_title"
+    t.string   "seo_description"
+    t.string   "seo_tags"
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
