@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/" => "base#index"
 
+    resources :galleries
+
     resources :contact_requests, only: [:index, :show, :destroy]
     resources :pages, except: [:show]
     resources :users, except: [:show]
