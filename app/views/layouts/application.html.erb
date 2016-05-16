@@ -4,7 +4,11 @@
     <title><%= content_for?(:title) ? "#{yield(:title)} - " : "" %><%= t("sitename") %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="<%= I18n.locale %>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='description' content='<%= content_for?(:meta_description) ? "#{yield(:meta_description)}" : t('.default_seo.description') %>'/>
+    <meta name='keywords' content='<%= content_for?(:meta_keywords) ? "#{yield(:meta_keywords)}" : t('.default_seo.keywords') %>'/>
+    <meta name='robots' content='index, follow' />
     <%= yield :header_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
