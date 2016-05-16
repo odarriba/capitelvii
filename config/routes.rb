@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, path: "admin"
 
   authenticate :user do
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/" => "base#index"
 
+    resources :contacts, only: [:index, :show, :destroy]
     resources :pages, except: [:show]
     resources :users, except: [:show]
   end
