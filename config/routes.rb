@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
   end
 
+  get '/contacta', to: 'contacts#new'
+  post '/contacta', to: 'contacts#create'
+
   # Add routes for pages
   get '*slug', to: 'pages#show', as: :page
   root 'pages#show', defaults: { slug: "/" }
