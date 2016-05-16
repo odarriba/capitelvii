@@ -30,6 +30,11 @@
       </td>
     </tr>
     <% end %>
+    <% if @contact_requests.blank? %>
+    <tr class="no-records">
+      <td colspan="3"><%= t(".table.no-records") %></td>
+    </tr>
+    <% end %>
 </table>
 <div class='text-center'>
   <%= paginate @contact_requests, window: 2, theme: 'twitter-bootstrap-3' %>
