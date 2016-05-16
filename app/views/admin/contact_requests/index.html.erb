@@ -13,7 +13,7 @@
   <thead>
     <tr>
       <th class="col-sm-6"><%= t('.table.name') %></th>
-      <th class="col-sm-3"><%= t('.table.date') %></th>
+      <th class="col-sm-3"><%= t('.table.created_at') %></th>
       <th class="col-sm-3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
     <% @contact_requests.each do |contact_request| %>
     <tr>
       <td><%= contact_request.name %></td>
-      <td><%= contact_request.updated_at.strftime("%d/%m/%Y - %H:%M") %></td>
+      <td><%= contact_request.created_at.strftime("%d/%m/%Y - %H:%M") %></td>
       <td>
         <span class='pull-right'>
           <%= link_to "<i class='fa fa-eye'></i>&nbsp;#{t(".table.buttons.show")}".html_safe, url_for(action: :show, id: contact_request.id), class: "btn btn-xs btn-default" %>
