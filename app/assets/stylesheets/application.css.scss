@@ -24,7 +24,23 @@
   max-width: 900px;
 
   &.content {
-    font-size: 1.15em;
+    font-size: 1.2em;
+
+    img {
+      border: 1px solid #ddd;
+      padding: 3px;
+      box-sizing: content-box;
+
+      &[style*="float: right"], &[style*="float:right"] {
+        margin-left: 4px;
+        margin-right: -10px;
+      }
+
+      &[style*="float: left"], &[style*="float:left"] {
+        margin-right: 4px;
+        margin-left: -10px;
+      }
+    }
   }
 }
 
