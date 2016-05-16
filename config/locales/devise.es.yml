@@ -31,24 +31,24 @@ es:
         action: Confirmar mi cuenta
         greeting: "¡Bienvenido %{recipient}!"
         instruction: 'Usted puede confirmar el correo electrónico de su cuenta a través de este enlace:'
-        subject: [CapitelVII] Instrucciones de confirmación
+        subject: "[CapitelVII] Instrucciones de confirmación"
       password_change:
         greeting: Hola %{recipient}!
         message: Le estamos contactando para notificarle que su contraseña ha sido cambiada.
-        subject: [CapitelVII] Contraseña cambiada
+        subject: "[CapitelVII] Contraseña cambiada"
       reset_password_instructions:
         action: Cambiar mi contraseña
         greeting: "¡Hola %{recipient}!"
         instruction: Alguien ha solicitado un enlace para cambiar su contraseña, lo que se puede realizar a través del siguiente enlace.
         instruction_2: Si usted no lo ha solicitado, por favor ignore este correo electrónico.
         instruction_3: Su contraseña no será cambiada hasta que usted acceda el enlace y cree uno nuevo.
-        subject: [CapitelVII] Instrucciones de recuperación de contraseña
+        subject: "[CapitelVII] Instrucciones de recuperación de contraseña"
       unlock_instructions:
         action: Desbloquear mi cuenta
         greeting: "¡Hola %{recipient}!"
         instruction: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
         message: Su cuenta ha sido bloqueada debido a una cantidad excesiva de intentos infructuosos para ingresar.
-        subject: [CapitelVII] Instrucciones para desbloquear
+        subject: "[CapitelVII] Instrucciones para desbloquear"
     omniauth_callbacks:
       failure: No has sido autorizado en la cuenta %{kind} porque "%{reason}".
       success: Has sido autorizado satisfactoriamente en la cuenta %{kind}.
