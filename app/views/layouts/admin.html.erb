@@ -37,6 +37,7 @@
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t(".navbar.view_site"), root_path() %></li>
             <li class="dropdown">
               <%= link_to "#{current_user.email}&nbsp;<span class='caret'></span>".html_safe, '#', class: "dropdown-toggle", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': true, 'aria-expanded': false %>
               <ul class="dropdown-menu">
