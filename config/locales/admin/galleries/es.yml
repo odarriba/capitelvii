@@ -1,0 +1,20 @@
+es:
+  admin:
+    galleries:
+      index:
+        title: "Galerías"
+        subtitle: "listado de galerías"
+        new: "Nueva galería"
+        stats:
+          one: "Una galería registrada"
+          other: "%{count} galerías registradas"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
+        table:
+          title: Título
+          buttons:
+            show: "Ver"
+            pictures: "Imágenes"
+            edit: "Editar"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar esta galería?"
+          no-records: "Parece que aquí aún no hay nada..."
