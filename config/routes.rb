@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, path: "admin"
 
   authenticate :user do
@@ -8,9 +9,13 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/" => "base#index"
 
+    resources :contact_requests, only: [:index, :show, :destroy]
     resources :pages, except: [:show]
     resources :users, except: [:show]
   end
+
+  get '/contacta', to: 'contact_requests#new', as: :new_contact
+  post '/contacta', to: 'contact_requests#create'
 
   # Add routes for pages
   get '*slug', to: 'pages#show', as: :page

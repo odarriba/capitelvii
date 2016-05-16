@@ -1,0 +1,36 @@
+<% content_for :title, t(".title") %>
+<div class="page-header">
+  <h1><%= t(".title") %> <small><%= t(".subtitle") %></small></h1>
+</div>
+<div class="list-actions clearfix">
+  <span class='pull-right text-right'>
+    <%= t(".stats", count: @contact_requests.total_count) %><br />
+    <%= t(".stats_page", current_page: @contact_requests.current_page, total_pages: @contact_requests.total_pages) %>
+  </span>
+</div>
+<hr class='divider' />
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th class="col-sm-6"><%= t('.table.name') %></th>
+      <th class="col-sm-3"><%= t('.table.created_at') %></th>
+      <th class="col-sm-3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contact_requests.each do |contact_request| %>
+    <tr>
+      <td><%= contact_request.name %></td>
+      <td><%= contact_request.created_at.strftime("%d/%m/%Y - %H:%M") %></td>
+      <td>
+        <span class='pull-right'>
+          <%= link_to "<i class='fa fa-eye'></i>&nbsp;#{t(".table.buttons.show")}".html_safe, url_for(action: :show, id: contact_request.id), class: "btn btn-xs btn-default" %>
+          <%= link_to "<i class='fa fa-trash'></i>&nbsp;#{t(".table.buttons.destroy")}".html_safe, url_for(action: :destroy, id: contact_request.id), method: :delete, 'data-confirm': t('.table.buttons.destroy_confirm'), class: "btn btn-xs btn-danger" %>
+        </span>
+      </td>
+    </tr>
+    <% end %>
+</table>
+<div class='text-center'>
+  <%= paginate @contact_requests, window: 2, theme: 'twitter-bootstrap-3' %>
+</div>

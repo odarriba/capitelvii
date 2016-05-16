@@ -1,0 +1,17 @@
+es:
+  contact_requests:
+    new:
+      form_info: "Por favor, rellene el formulario para enviar una solicitud de información:"
+      name: "Nombre"
+      name_placeholder: "Nombre de la persona de contacto..."
+      email: "E-mail"
+      email_placeholder: "Dirección de e-mail..."
+      phone: "Teléfono"
+      phone_placeholder: "Número de teléfono de contacto..."
+      body: "Mensaje"
+      body_placeholder: "Mensaje de entre 20 y 255 caracteres."
+      body_help: "El mensaje debe tener entre 20 y 255 caracteres."
+      submit: "Enviar"
+    create:
+      saved: "<b>¡Gracias por contactar con nosotros!</b><br />Nos pondremos en contacto con usted pronto."
+      error: "<b>¡Vaya!</b> Ha ocurrido un error.<br />Por favor, revise los datos del formulario."

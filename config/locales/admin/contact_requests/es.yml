@@ -1,0 +1,31 @@
+es:
+  admin:
+    contact_requests:
+      index:
+        title: "Peticiones"
+        subtitle: "peticiones de contacto registradas"
+        stats:
+          one: "Una petición registrada"
+          other: "%{count} peticiones registradas"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
+        table:
+          name: "Nombre"
+          created_at: "Fecha"
+          buttons:
+            show: "Ver"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar esta petición?"
+      show:
+        title: "Ver petición"
+        name: "Nombre"
+        email: "E-mail"
+        phone: "Teléfono"
+        body: "Texto"
+        created_at: "Fecha"
+        back: "Volver a la lista"
+        destroy: "Eliminar"
+        destroy_confirm: "¿Seguro que quieres eliminar esta petición?"
+      destroy:
+        success: "La petición de  <b>%{name}</b> ha sido eliminada correctamente."
+        error: "La petición de <b>%{name}</b> no se ha podido eliminar."
+      not_found: "La petición solicitada no se ha podido encontrar."
