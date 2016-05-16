@@ -21,6 +21,7 @@ es:
           users: "Usuarios"
         view_site: "Ver la web"
         user:
+          edit: "Editar mi usuario"
           sign_out: "Cerrar sesión"
       footer:
         text_html: "%{year} &copy; Capitel VII S.L."
