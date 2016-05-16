@@ -1,10 +1,10 @@
-class ContactsController < ApplicationController
+class ContactRequestsController < ApplicationController
   before_action :load_page
 
   # Action to get the form of a new contact request
   #
   def new
-    @contact = Contact.new()
+    @contact_request = ContactRequest.new()
 
     respond_to do |format|
       format.html
@@ -15,16 +15,17 @@ class ContactsController < ApplicationController
   #
   def create
     # Avoid duplicates
-    @contact = Contact.find_or_initialize_by(contact_params)
+    @contact_request = ContactRequest.find_or_initialize_by(contact_request_params)
 
     respond_to do |format|
       format.html {
-        if (@contact.save)
+        if (@contact_request.save)
           flash[:notice] = t(".saved")
+          redirect_to action: :new
         else
           flash[:error] = t(".error")
+          render action: :new
         end
-        render action: :new
       }
     end
   end
@@ -40,7 +41,7 @@ class ContactsController < ApplicationController
 
   # Strong Paramters filter to get contact request params
   #
-  def contact_params
-    params.require(:contact).permit(:name, :email, :phone, :body)
+  def contact_request_params
+    params.require(:contact_request).permit(:name, :email, :phone, :body)
   end
 end

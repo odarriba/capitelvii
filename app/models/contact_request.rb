@@ -1,4 +1,4 @@
-class Contact < ActiveRecord::Base
+class ContactRequest < ActiveRecord::Base
   validates_presence_of :name, :email, :phone, :body
 
   validates :name, length: { in: 2..255 }

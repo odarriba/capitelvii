@@ -15,7 +15,7 @@ es:
       navbar:
         brand_name: "Capitel VII Admin"
         elements:
-          contacts: "Contactos"
+          contact_requests: "Peticiones"
           pages: "Páginas"
           albums: "Galerías"
           users: "Usuarios"

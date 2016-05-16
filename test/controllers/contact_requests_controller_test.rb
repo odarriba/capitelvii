@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ContactsControllerTest < ActionController::TestCase
+class ContactRequestsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,0 +1,17 @@
+es:
+  admin:
+    contact_requests:
+      index:
+        title: "Peticiones"
+        subtitle: "peticiones de contacto registradas"
+        stats:
+          one: "Una petición registrada"
+          other: "%{count} peticiones registradas"
+        stats_page: "Mostrando página %{current_page} de %{total_pages}"
+        table:
+          name: "Nombre"
+          date: "Fecha"
+          buttons:
+            show: "Ver"
+            destroy: "Eliminar"
+            destroy_confirm: "¿Seguro que quieres eliminar esta petición?"

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160516142809) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
-  create_table "contacts", force: :cascade do |t|
+  create_table "contact_requests", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "phone"

@@ -1,5 +1,5 @@
 es:
-  contacts:
+  contact_requests:
     new:
       form_info: "Por favor, rellene el formulario para enviar una solicitud de información:"
       name: "Nombre"
