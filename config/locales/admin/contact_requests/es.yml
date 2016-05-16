@@ -15,3 +15,7 @@ es:
             show: "Ver"
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar esta petición?"
+      destroy:
+        success: "La petición de  <b>%{name}</b> ha sido eliminada correctamente."
+        error: "La petición de <b>%{name}</b> no se ha podido eliminar."
+      not_found: "La petición solicitada no se ha podido encontrar."

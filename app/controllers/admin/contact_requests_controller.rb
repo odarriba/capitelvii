@@ -36,9 +36,9 @@ class Admin::ContactRequestsController < Admin::BaseController
     return if @contact_request.blank?
 
     if (@contact_request.destroy)
-      flash[:notice] = t(".success", title: @contact_request.name)
+      flash[:notice] = t(".success", name: @contact_request.name)
     else
-      flash[:error] = t(".error", title: @contact_request.name)
+      flash[:error] = t(".error", name: @contact_request.name)
     end
 
     respond_to do |format|
