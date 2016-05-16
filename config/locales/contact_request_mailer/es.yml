@@ -1,4 +1,4 @@
 es:
   contact_request_mailer:
     notify_email:
-      subject: "Nueva petición de contacto"
+      subject: "[CapitelVII] Nueva petición de contacto"
