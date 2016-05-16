@@ -7,9 +7,10 @@
   <div class='subtitle'><%= @page.subtitle %></div>
 </div>
 <%= raw @page.body %>
-<hr class='divider' />
-<% end %>
+<% else %>
 <p><%= t(".form_info") %></p>
+<% end %>
+
 <%= form_for @contact, url: new_contact_path(), html: { method: :post, class: 'form-horizontal form-contact' } do |f| %>
 <div class='row'>
   <div class='col-sm-offset-2 col-sm-8'>
