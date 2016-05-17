@@ -8,8 +8,10 @@
 <div id="slider" class="flexslider">
   <ul class="slides">
     <% @gallery.pictures.each do |pic| %>
-    <li><%= image_tag pic.file.url, alt: pic.description, title: pic.description %></li>
-    <% unless (pic.description.blank?) %><p class="flex-caption"><%= pic.description %></p><% end %>
+    <li>
+      <%= image_tag pic.file.url, alt: pic.description, title: pic.description %>
+      <% unless (pic.description.blank?) %><p class="flex-caption"><%= pic.description %></p><% end %>
+    </li>
     <% end %>
   </ul>
 </div>
