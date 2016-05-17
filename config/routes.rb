@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'galleries/show'
-
   devise_for :users, path: "admin"
 
   authenticate :user do
@@ -18,12 +16,12 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
   end
 
-  get '/contacta', to: 'contact_requests#new', as: :new_contact
-  post '/contacta', to: 'contact_requests#create'
+  get "/#{Rails.configuration.x.cms['routes']['contact_requests']}", to: 'contact_requests#new', as: :new_contact
+  post "/#{Rails.configuration.x.cms['routes']['contact_requests']}", to: 'contact_requests#create'
 
   # Add routes for galleries
-  get 'nuestros-trabajos/*slug', to: 'galleries#show', as: :gallery
-  get 'nuestros-trabajos', to: 'galleries#show'
+  get "/#{Rails.configuration.x.cms['routes']['galleries']}/*slug", to: 'galleries#show', as: :gallery
+  get "/#{Rails.configuration.x.cms['routes']['galleries']}", to: 'galleries#show'
 
   # Add routes for pages
   get '*slug', to: 'pages#show', as: :page

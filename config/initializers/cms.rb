@@ -4,3 +4,8 @@ Rails.application.config.x.cms['menu_items'] = [
   Admin::ContactRequestsController,
   Admin::UsersController
 ]
+
+Rails.application.config.x.cms['routes'] = {
+  'galleries' => 'nuestros-trabajos',
+  'contact_requests' => 'contacta'
+}
