@@ -1,5 +1,6 @@
 class Admin::GalleriesController < Admin::BaseController
   before_action :load_gallery, only: [:edit, :update, :destroy]
+  
   def index
     page = params[:page].to_i unless (params[:page].blank? || params[:page].to_i < 1)
     page ||= 1
