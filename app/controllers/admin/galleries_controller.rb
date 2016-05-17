@@ -67,7 +67,7 @@ class Admin::GalleriesController < Admin::BaseController
         else
           flash[:error] = t(".error")
           @gallery.pictures.build
-          
+
           render action: :edit
         end
       }
@@ -104,6 +104,6 @@ class Admin::GalleriesController < Admin::BaseController
   # Strong Parameters for Gallery objects.
   #
   def gallery_params
-    params.require(:gallery).permit(:title, :description, :slug, :position, :draft, :seo_title, :seo_description, :seo_tags)
+    params.require(:gallery).permit(:title, :description, :slug, :position, :draft, :seo_title, :seo_description, :seo_tags, :pictures_attributes => [:description, :id, :file, :file_cache, :_destroy])
   end
 end

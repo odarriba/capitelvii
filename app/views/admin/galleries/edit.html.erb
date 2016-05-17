@@ -3,6 +3,6 @@
   <h1><%= t(".title") %> <small><%= t(".subtitle", title: Gallery.pluck(:title).find(@gallery.id).first) %></small></h1>
 </div>
 
-<%= form_for @gallery, url: {action: "update"}, html: {class: "form-horizontal"} do |f| %>
+<%= form_for @gallery, url: {action: "update"}, html: { multipart: true, class: "form-horizontal" } do |f| %>
 <%= render partial: 'form', locals: { f: f } %>
 <% end %>
