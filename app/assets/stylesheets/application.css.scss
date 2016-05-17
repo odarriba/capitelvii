@@ -12,7 +12,7 @@
  *
  *= require bootstrap_and_overrides
  *= require font_awesome_and_overrides
- *= require flexslider.css
+ *= require lightbox
  *= require_tree ./ui/
  *= require_tree ./contents/
  *= require_tree ./libraries/
@@ -30,7 +30,7 @@
     font-size: 1.2em;
     padding-bottom: 20px;
 
-    p img {
+    img {
       border: 1px solid #ddd;
       padding: 3px;
       box-sizing: content-box;
@@ -43,6 +43,16 @@
       &[style*="float: left"], &[style*="float:left"] {
         margin-right: 10px;
         margin-left: -10px;
+      }
+    }
+
+    .gallery {
+      div {
+        padding-bottom: 15px;
+      }
+
+      img {
+        width: 100%;
       }
     }
 

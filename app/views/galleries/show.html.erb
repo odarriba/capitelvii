@@ -13,51 +13,23 @@
   <p><%= @gallery.description %></p>
 </div>
 
-<div id="slider" class="flexslider">
-  <ul class="slides">
-    <% @gallery.pictures.each do |pic| %>
-    <li>
-      <%= image_tag pic.file.url, alt: pic.description, title: pic.description %>
-      <% unless (pic.description.blank?) %><p class="flex-caption"><%= pic.description %></p><% end %>
-    </li>
-    <% end %>
-  </ul>
-</div>
-<div id="carousel" class="flexslider">
-  <ul class="slides">
-    <% @gallery.pictures.each do |pic| %>
-    <li><%= image_tag pic.file.thumb.url, alt: pic.description, title: pic.description %></li>
-    <% end %>
-  </ul>
+<div class="gallery row">
+  <% @gallery.pictures.each do |pic| %>
+  <div class='col-xs-4 col-sm-3'>
+    <%= link_to image_tag(pic.file.thumb.url, alt: pic.description, title: pic.description), pic.file.url, data: { lightbox: "album", title: pic.description} %>
+  </div>
+  <% end %>
 </div>
 
 <% content_for :javascripts do -%>
 <script type="text/javascript">
 (function(window, document, $, undefined){
   $(function(){
-    // The slider being synced must be initialized first
-    $('#carousel').flexslider({
-      animation: "slide",
-      controlNav: false,
-      animationLoop: false,
-      slideshow: false,
-      itemWidth: 100,
-      itemMargin: 5,
-      asNavFor: '#slider'
-    });
-
-    $('#slider').flexslider({
-      animation: "slide",
-      controlNav: false,
-      animationLoop: false,
-      slideshow: false,
-      sync: "#carousel"
-    });
-
-    $('select.gallery-select').change(function(e){
-      window.location = $(this).val();
+    lightbox.option({
+      'albumLabel': "Imagen %1 de %2",
+      'wrapAround': true
     })
   });
 })(window, document, window.jQuery);
-</script
+</script>
 <% end %>

@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.flexslider
+//= require lightbox
 //= require bootstrap-sprockets
 //= require libraries/cookie-policy-consent
