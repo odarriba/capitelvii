@@ -28,7 +28,12 @@
     lightbox.option({
       'albumLabel': "Imagen %1 de %2",
       'wrapAround': true
-    })
+    });
+
+    $('select.gallery-select').change(function(e){
+      window.location = $(this).val();
+    });
+
   });
 })(window, document, window.jQuery);
 </script>
