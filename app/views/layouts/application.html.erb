@@ -31,5 +31,14 @@
 
     <%= javascript_include_tag 'application' %>
     <%= yield :javascripts %>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        CPC.init({
+          msg: '<p><b>Aviso de cookies</b>: este sitio web utiliza cookies para su funcionamiento (<a href="<%= page_path(slug: Rails.configuration.x.cms['routes']['cookies']) %>">más información</a>).<br /><a href="#" id="cookie-policy-consent-close">Acepto el uso de cookies</a></p>',
+          load_external_files: false
+        });
+      };
+    </script>
   </body>
 </html>

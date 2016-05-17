@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require jquery.flexslider
 //= require bootstrap-sprockets
+//= require libraries/cookie-policy-consent
