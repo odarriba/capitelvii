@@ -9,6 +9,7 @@
   <ul class="slides">
     <% @gallery.pictures.each do |pic| %>
     <li><%= image_tag pic.file.url, alt: pic.description, title: pic.description %></li>
+    <% unless (pic.description.blank?) %><p class="flex-caption"><%= pic.description %></p><% end %>
     <% end %>
   </ul>
 </div>
@@ -30,7 +31,7 @@
       controlNav: false,
       animationLoop: false,
       slideshow: false,
-      itemWidth: 210,
+      itemWidth: 100,
       itemMargin: 5,
       asNavFor: '#slider'
     });
