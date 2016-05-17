@@ -3,7 +3,7 @@ class GalleriesController < ApplicationController
   before_action :load_gallery
 
   def show
-    return if (@gallery.blank? || @page.blank?)
+    return if @gallery.blank?
 
     respond_to do |format|
       format.html
