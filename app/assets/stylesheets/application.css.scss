@@ -28,7 +28,7 @@
   &.content {
     font-size: 1.2em;
 
-    img:not(.flexslider img) {
+    p > img {
       border: 1px solid #ddd;
       padding: 3px;
       box-sizing: content-box;
