@@ -16,14 +16,15 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
   end
 
+  # Routes for contact requests
   get "/#{Rails.configuration.x.cms['routes']['contact_requests']}", to: 'contact_requests#new', as: :new_contact
   post "/#{Rails.configuration.x.cms['routes']['contact_requests']}", to: 'contact_requests#create'
 
-  # Add routes for galleries
+  # Routes for galleries
   get "/#{Rails.configuration.x.cms['routes']['galleries']}/*slug", to: 'galleries#show', as: :gallery
   get "/#{Rails.configuration.x.cms['routes']['galleries']}", to: 'galleries#show'
 
-  # Add routes for pages
+  # Routes for pages
   get '*slug', to: 'pages#show', as: :page
   root 'pages#show', defaults: { slug: "/" }
 
