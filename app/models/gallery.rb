@@ -4,6 +4,10 @@ class Gallery < ActiveRecord::Base
 
   has_many :pictures
 
+  accepts_nested_attributes_for :pictures,
+    :allow_destroy => true,
+    :reject_if     => :all_blank
+
   validates :title, :slug, presence: true
   validates :slug, uniqueness: true
   validates :position, numericality: { only_integer: true }
