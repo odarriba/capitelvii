@@ -36,7 +36,7 @@ class ContactRequestsController < ApplicationController
   # if not found, get a new empty object.
   #
   def load_page
-    @page = Page.find_or_initialize_by(slug: 'contacta') || Page.new
+    @page = Page.find_or_initialize_by(slug: Rails.configuration.x.cms['routes']['contact_requests']) || Page.new
   end
 
   # Strong Paramters filter to get contact request params

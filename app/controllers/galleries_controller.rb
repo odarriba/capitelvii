@@ -13,7 +13,7 @@ class GalleriesController < ApplicationController
   protected
 
   def load_page
-    @page = Page.find_or_initialize_by(slug: 'nuestros-trabajos')
+    @page = Page.find_or_initialize_by(slug: Rails.configuration.x.cms['routes']['galleries'])
   end
 
   def load_gallery

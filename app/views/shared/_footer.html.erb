@@ -2,7 +2,7 @@
   <div class="container">
     <div class='copyright'>
       <%= t("layouts.application.footer.text_html", year: Time.now.year) %><br />
-      <%= t("layouts.application.footer.made_html") %>
+      <%= ['contact_requests', 'terms', 'cookies'].map{ |a| link_to t("layouts.application.footer.links.#{a}"), page_path(Rails.configuration.x.cms['routes'][a]) }.join("&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;").html_safe %>
     </div>
     <div class='phones'>
       <i class='fa fa-mobile'></i>&nbsp;&nbsp;<a href="tel:609 86 63 94">609 86 63 94</a><br />

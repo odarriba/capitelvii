@@ -1,0 +1,63 @@
+@import '../variables';
+
+#cookie-policy-consent {
+  width: 100%;
+  padding: 16px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  border-top: 1px solid #fff;
+  background: $brand-color;
+}
+#cookie-policy-consent p {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+  text-align: left;
+  color: #fff;
+}
+#cookie-policy-consent p b {
+  font-weight: 700;
+}
+#cookie-policy-consent p a {
+  color: #fff;
+  text-decoration: underline;
+}
+#cookie-policy-consent p a:hover {
+  color: #fff;
+}
+#cookie-policy-consent svg {
+  position: absolute;
+  top: -2px;
+  left: 10px;
+  float: left;
+  margin-right: 8px;
+}
+#cookie-policy-consent svg .bg {
+  fill: #FFFFFF;
+}
+#cookie-policy-consent svg .fg {
+  fill: #335B90;
+}
+#cookie-policy-consent a#cookie-policy-consent-more-info {
+  /*margin-right: 10px;*/
+  /*background: #dc042b;*/
+  /*padding: 16px;*/
+
+  text-decoration: underline;
+  color: #fff;
+}
+#cookie-policy-consent a#cookie-policy-consent-close {
+  /*margin-right: 10px;*/
+  /*background: #ccc;*/
+  /*padding: 16px;*/
+
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* CAUTION!: This rule must be the last */
+#cookie-policy-consent {
+  display: block !important;
+}
