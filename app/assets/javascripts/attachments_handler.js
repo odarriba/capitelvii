@@ -103,7 +103,7 @@ AttachmentsHandler = function(placeholder_selector, deep) {
       attachment.detach();
     }
 
-    if (placeholder_selector.find(".attachment").length == 1) {
+    if (placeholder_selector.find(".attachment:visible").length == 1) {
       placeholder_selector.find(".attachment").find('.btn-delete').attr('disabled', 'disabled');
     }
   });
