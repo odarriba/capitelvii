@@ -1,0 +1,5 @@
+es:
+  admin:
+    base:
+      index:
+        admin_panel: "Panel de administración."
