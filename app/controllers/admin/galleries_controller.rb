@@ -1,6 +1,6 @@
 class Admin::GalleriesController < Admin::BaseController
   before_action :load_gallery, only: [:edit, :update, :destroy]
-  
+
   def index
     page = params[:page].to_i unless (params[:page].blank? || params[:page].to_i < 1)
     page ||= 1
@@ -21,6 +21,8 @@ class Admin::GalleriesController < Admin::BaseController
   def new
     @gallery = Gallery.new
 
+    @gallery.pictures.build
+
     respond_to do |format|
       format.html
     end
@@ -36,6 +38,8 @@ class Admin::GalleriesController < Admin::BaseController
           redirect_to action: :index
         else
           flash[:error] = t(".error")
+          @gallery.pictures.build
+
           render action: :new
         end
       }
@@ -44,6 +48,8 @@ class Admin::GalleriesController < Admin::BaseController
 
   def edit
     return if @gallery.blank?
+
+    @gallery.pictures.build
 
     respond_to do |format|
       format.html
@@ -60,6 +66,8 @@ class Admin::GalleriesController < Admin::BaseController
           redirect_to action: :index
         else
           flash[:error] = t(".error")
+          @gallery.pictures.build
+          
           render action: :edit
         end
       }
