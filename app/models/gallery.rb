@@ -2,13 +2,13 @@ class Gallery < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 
-  has_many :pictures
+  has_many :pictures, dependent: :destroy
 
   accepts_nested_attributes_for :pictures,
     :allow_destroy => true,
     :reject_if     => :all_blank
 
-  validates :title, :slug, presence: true
+  validates :title, :slug, :pictures, presence: true
   validates :slug, uniqueness: true
   validates :position, numericality: { only_integer: true }
 

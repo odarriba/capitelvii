@@ -7,7 +7,13 @@ AttachmentsHandler = function(placeholder_selector, deep) {
   // Detach layout
   if (initial_index > 0) {
     attachment_layout.detach();
+
+    // If there are only 2 and one is for layout, disable delete button
+    if (initial_index == 1) {
+      placeholder_selector.find(".attachment").find('.btn-delete').attr('disabled', 'disabled');
+    }
   } else {
+    // Don't detach and disable delete button
     attachment_layout = attachment_layout.clone();
     placeholder_selector.find(".attachment.new").last().find('.btn-delete').attr('disabled', 'disabled');
   }
