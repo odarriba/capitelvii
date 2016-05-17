@@ -2,6 +2,8 @@ class Gallery < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 
+  has_many :pictures
+
   validates :title, :slug, presence: true
   validates :slug, uniqueness: true
   validates :position, numericality: { only_integer: true }
