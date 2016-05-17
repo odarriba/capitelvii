@@ -44,7 +44,6 @@ es:
           title: Título
           buttons:
             show: "Ver"
-            pictures: "Imágenes"
             edit: "Editar"
             destroy: "Eliminar"
             destroy_confirm: "¿Seguro que quieres eliminar esta galería?"
