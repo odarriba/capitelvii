@@ -1,6 +1,14 @@
 es:
   admin:
     galleries:
+      pictures:
+        title: "Imágenes"
+        new: "Añadir imagen"
+        description: "Descripción"
+        description_placeholder: "Descripción de la imagen..."
+        file: "Archivo"
+        file_help: "Imagen con extensión <b>jpg</b>, <b>jpeg</b>, <b>gif</b> o <b>png</b>.<br />Tamaño máximo de archivo: 2 Mb."
+        delete: "Eliminar"
       form:
         title: "Título"
         title_placeholder: "Título de la galería"

@@ -66,6 +66,8 @@
   </div>
 </fieldset>
 
+<%= render partial: 'admin/galleries/pictures', locals: { f: f } %>
+
 <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
     <hr class="divider" />
@@ -77,3 +79,13 @@
     <%= button_tag "#{t(".submit")}&nbsp;&nbsp;<i class='fa fa-chevron-right'></i>".html_safe, type: "submit", class: "btn btn-primary pull-right" %>
   </div>
 </div>
+
+<% content_for :javascripts do -%>
+<script type="text/javascript">
+(function(window, document, $, undefined){
+  $(function(){
+    <%= yield :javascript_pictures %>
+  });
+})(window, document, window.jQuery);
+</script
+<% end %>
