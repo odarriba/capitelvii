@@ -54,7 +54,7 @@ es:
         title: "Editar una página"
         subtitle: "%{title}"
       update:
-        success: "ELa página <b>%{title}</b> ha sido actualizada correctamente."
+        success: "La página <b>%{title}</b> ha sido actualizada correctamente."
         error: "La página no se ha podido actualizar. Por favor, revise el formulario a continuación."
       destroy:
         success: "La página <b>%{title}</b> ha sido eliminada correctamente."

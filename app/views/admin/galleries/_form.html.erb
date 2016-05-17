@@ -1,0 +1,91 @@
+<div class="form-group<% unless f.object.errors[:title].blank?%> has-error<% end %>">
+  <div class="col-sm-12">
+    <%= f.text_field :title, type: 'text', class: 'form-control input-lg', placeholder: t('.title_placeholder'), required: true %>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-12">
+    <hr class="divider" />
+  </div>
+</div>
+<div class="form-group<% unless f.object.errors[:description].blank?%> has-error<% end %>">
+  <%= f.label :description, t('.description'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :description, type: 'text', class: 'form-control', placeholder: t('.description_placeholder') %>
+  </div>
+</div>
+<div class="form-group<% unless f.object.errors[:slug].blank?%> has-error<% end %>">
+  <%= f.label :slug, t('.slug'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :slug, type: 'text', class: 'form-control', placeholder: t('.slug_placeholder') %>
+    <p class="help-block"><%= t('.slug_help') %></p>
+  </div>
+</div>
+<div class="form-group<% unless f.object.errors[:position].blank?%> has-error<% end %>">
+  <%= f.label :position, t('.position'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :position, type: 'number', class: 'form-control', placeholder: t('.position_placeholder'), step: "1" %>
+  </div>
+</div>
+<div class="form-group<% unless f.object.errors[:draft].blank?%> has-error<% end %>">
+  <%= f.label :draft, t('.draft'), class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10">
+    <%= f.select :draft, options_for_select([[t('.draft_true'), true], [t('.draft_false'), false]], f.object.draft), {}, class: "form-control" %>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-12">
+    <hr class="divider" />
+  </div>
+</div>
+<!-- SEO fields -->
+<fieldset class='row'>
+  <h3 class='title'><%= t(".seo_fields") %></h3>
+  <div class='col-md-6 col-sm-12'>
+    <div class="form-group<% unless f.object.errors[:seo_title].blank?%> has-error<% end %>">
+      <%= f.label :seo_title, t('.seo_title'), class: 'col-md-4 col-sm-2 control-label' %>
+      <div class="col-md-8 col-sm-10">
+        <%= f.text_field :seo_title, type: 'text', class: 'form-control', placeholder: t('.seo_title_placeholder') %>
+      </div>
+    </div>
+    <div class="form-group<% unless f.object.errors[:seo_tags].blank?%> has-error<% end %>">
+      <%= f.label :seo_tags, t('.seo_tags'), class: 'col-md-4 col-sm-2 control-label' %>
+      <div class="col-md-8 col-sm-10">
+        <%= f.text_field :seo_tags, type: 'text', class: 'form-control', placeholder: t('.seo_tags_placeholder') %>
+        <p class="help-block"><%= t(".seo_tags_help") %></p>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-6 col-sm-12'>
+    <div class="form-group<% unless f.object.errors[:seo_description].blank?%> has-error<% end %>">
+      <%= f.label :seo_description, t('.seo_description'), class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= f.text_area :seo_description, class: 'form-control', placeholder: t('.seo_description_placeholder'), rows: 4 %>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+<%= render partial: 'admin/galleries/pictures', locals: { f: f } %>
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <hr class="divider" />
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= link_to t(".back"), url_for(action: :index), class: "btn btn-default pull-left" %>
+    <%= button_tag "#{t(".submit")}&nbsp;&nbsp;<i class='fa fa-chevron-right'></i>".html_safe, type: "submit", class: "btn btn-primary pull-right" %>
+  </div>
+</div>
+
+<% content_for :javascripts do -%>
+<script type="text/javascript">
+(function(window, document, $, undefined){
+  $(function(){
+    <%= yield :javascript_pictures %>
+  });
+})(window, document, window.jQuery);
+</script
+<% end %>

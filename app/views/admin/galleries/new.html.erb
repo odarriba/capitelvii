@@ -1,0 +1,8 @@
+<% content_for :title, t(".title") %>
+<div class="page-header">
+  <h1><%= t(".title") %> <small><%= t(".subtitle") %></small></h1>
+</div>
+
+<%= form_for @gallery, url: {action: "create"}, html: { multipart: true, class: "form-horizontal" } do |f| %>
+<%= render partial: 'form', locals: { f: f } %>
+<% end %>

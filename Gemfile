@@ -30,6 +30,9 @@ gem 'bootstrap-kaminari-views', '~> 0.0.5'
 # CKEditor
 gem 'ckeditor', '~> 4.1.6'
 
+# Flexslider
+gem 'flexslider', '~> 2.2.0'
+
 # Images
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.5.1'

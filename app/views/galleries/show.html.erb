@@ -1,0 +1,63 @@
+<%= content_for :title, (@page.seo_title.blank?) ? @page.title : @page.seo_title %>
+<%= content_for :meta_description, @page.seo_description %>
+<%= content_for :meta_tags, @page.seo_tags %>
+<div class='page-header'>
+  <div class='row'>
+    <div class='col-sm-8'>
+      <h1 class='title'><%= @page.title %></h1>
+    </div>
+    <div class='col-sm-4'>
+      <%= select_tag :gallery, options_for_select(Gallery.published.map{|a| [a.title, gallery_path(a.slug)]}, gallery_path(@gallery.slug)), class: 'form-control gallery-select' %>
+    </div>
+  </div>
+  <p><%= @gallery.description %></p>
+</div>
+
+<div id="slider" class="flexslider">
+  <ul class="slides">
+    <% @gallery.pictures.each do |pic| %>
+    <li>
+      <%= image_tag pic.file.url, alt: pic.description, title: pic.description %>
+      <% unless (pic.description.blank?) %><p class="flex-caption"><%= pic.description %></p><% end %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<div id="carousel" class="flexslider">
+  <ul class="slides">
+    <% @gallery.pictures.each do |pic| %>
+    <li><%= image_tag pic.file.thumb.url, alt: pic.description, title: pic.description %></li>
+    <% end %>
+  </ul>
+</div>
+
+<% content_for :javascripts do -%>
+<script type="text/javascript">
+(function(window, document, $, undefined){
+  $(function(){
+    // The slider being synced must be initialized first
+    $('#carousel').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      itemWidth: 100,
+      itemMargin: 5,
+      asNavFor: '#slider'
+    });
+
+    $('#slider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      sync: "#carousel"
+    });
+
+    $('select.gallery-select').change(function(e){
+      window.location = $(this).val();
+    })
+  });
+})(window, document, window.jQuery);
+</script
+<% end %>

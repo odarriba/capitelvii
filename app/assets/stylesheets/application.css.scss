@@ -12,6 +12,7 @@
  *
  *= require bootstrap_and_overrides
  *= require font_awesome_and_overrides
+ *= require flexslider.css
  *= require_tree ./ui/
  *= require_tree ./contents/
  *= require_self
@@ -27,7 +28,7 @@
   &.content {
     font-size: 1.2em;
 
-    img {
+    img:not(.flexslider img) {
       border: 1px solid #ddd;
       padding: 3px;
       box-sizing: content-box;
@@ -50,6 +51,26 @@
       .help-block {
         font-size: 0.8em;
       }
+    }
+
+    .flexslider {
+      margin-bottom: 40px;
+    }
+
+    .flex-caption {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 96%;
+      padding: 10px;
+      margin: 0;
+
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 }

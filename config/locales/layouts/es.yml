@@ -17,7 +17,7 @@ es:
         elements:
           contact_requests: "Peticiones"
           pages: "Páginas"
-          albums: "Galerías"
+          galleries: "Galerías"
           users: "Usuarios"
         view_site: "Ver la web"
         user:
