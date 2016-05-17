@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav elements-3">
         <% Page.published.menu_items.each do |page| %>
-        <li<% if request.path == page.path %> class="active"<% end %>>
+        <li<% if (page == @page) %> class="active"<% end %>>
           <%= link_to page.title, page.path %>
         </li>
         <% end %>

@@ -2,7 +2,15 @@
 <%= content_for :meta_description, @page.seo_description %>
 <%= content_for :meta_tags, @page.seo_tags %>
 <div class='page-header'>
-  <h1 class='title'><%= @page.title %></h1>
+  <div class='row'>
+    <div class='col-sm-8'>
+      <h1 class='title'><%= @page.title %></h1>
+    </div>
+    <div class='col-sm-4'>
+      <%= select_tag :gallery, options_for_select(Gallery.published.map{|a| [a.title, gallery_path(a.slug)]}, gallery_path(@gallery.slug)), class: 'form-control gallery-select' %>
+    </div>
+  </div>
+  <p><%= @gallery.description %></p>
 </div>
 
 <div id="slider" class="flexslider">
@@ -45,6 +53,10 @@
       slideshow: false,
       sync: "#carousel"
     });
+
+    $('select.gallery-select').change(function(e){
+      window.location = $(this).val();
+    })
   });
 })(window, document, window.jQuery);
 </script
