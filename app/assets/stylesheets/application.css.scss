@@ -46,6 +46,18 @@
       }
     }
 
+    .page-header {
+      @media screen and (max-width: 767px) {
+        select.gallery-select {
+          margin: 10px 0;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
     .gallery {
       div {
         padding-bottom: 15px;
