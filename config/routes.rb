@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get "/#{Rails.configuration.x.cms['routes']['galleries']}/*slug", to: 'galleries#show', as: :gallery
   get "/#{Rails.configuration.x.cms['routes']['galleries']}", to: 'galleries#show'
 
+  get "sitemap.xml", to: 'sitemaps#generate'
+
   # Routes for pages
   get '*slug', to: 'pages#show', as: :page
   root 'pages#show', defaults: { slug: "/" }
