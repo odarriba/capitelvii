@@ -27,6 +27,9 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
+# Nokogiri for XML generation
+gem 'nokogiri', '~> 1.6.7.2'
+
 # CKEditor
 gem 'ckeditor', '~> 4.1.6'
 
