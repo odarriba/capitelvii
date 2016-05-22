@@ -10,7 +10,7 @@ class SitemapsController < ApplicationController
           xml.url {
             xml.loc page.url
             xml.lastmod page.updated_at
-            xml.priority priority
+            xml.priority priority.round(1)
           }
         end
       }
