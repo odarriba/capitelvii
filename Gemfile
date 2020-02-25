@@ -38,7 +38,7 @@ gem 'lightbox2-rails', '2.8.2.1'
 
 # Images
 gem 'carrierwave', '~> 0.11.2'
-gem 'mini_magick', '~> 4.5.1'
+gem 'mini_magick', '~> 4.9.4'
 
 # Fog to upload stuff to S3
 gem 'fog-aws', '~> 0.9.2'
