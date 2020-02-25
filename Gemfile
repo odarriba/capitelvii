@@ -11,7 +11,7 @@ gem 'pg', '~> 0.18.4'
 gem 'devise', '~> 4.1'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', require: false
+gem 'sass-rails', '~>5.0', require: false
 gem 'sassc-rails'
 
 # Use Uglifier as compressor for JavaScript assets
