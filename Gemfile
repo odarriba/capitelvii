@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2.6'
 # Use PostgreSQL as the database for Active Record
 gem 'pg', '~> 0.18.4'
 
@@ -54,7 +54,7 @@ gem 'rollbar', '~> 2.11.3'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'puma', '~> 3.4.0'
+  gem 'puma'
 end
 
 group :development, :test do
