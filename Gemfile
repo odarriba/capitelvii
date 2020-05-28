@@ -24,7 +24,7 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'friendly_id', '~> 5.1.0'
 
 # Pagination
-gem 'kaminari', '~> 0.16.3'
+gem 'kaminari', '~> 1.2.1'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
 # Nokogiri for XML generation
