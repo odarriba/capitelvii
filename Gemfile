@@ -37,7 +37,7 @@ gem 'ckeditor', '~> 4.1.6'
 gem 'lightbox2-rails', '2.8.2.1'
 
 # Images
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 gem 'mini_magick', '~> 4.5.1'
 
 # Fog to upload stuff to S3
